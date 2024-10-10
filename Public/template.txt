@@ -1,0 +1,10 @@
+#title: HelloWorld
+#desc: HelloWorld function for newbies
+#tags: HelloWorld php function
+#cat: PHP
+
+function HelloWorld {
+  // author: 5 Mode
+  // 5mode.com
+  echo('Hello world');
+}
