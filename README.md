@@ -24,4 +24,4 @@ Feedback: <a href="mailto:posta@elettronica.lol" style="color:#e6d236;">posta@el
   	   
 ## Screenshots  
 	   
- ![DropIn in action](/DI_res/screenshot1.png)
+ ![DropIn in action](/Public/DI_res/screenshot1.png)
