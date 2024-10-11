@@ -30,7 +30,7 @@ html {
 body {
   margin: 0px; 
   padding: 0px;
-  background-color:#f6f6f6;
+  background-color:#ffffff;
   color: #878080; 
   font-family: Monospace, Verdana, Serif;
 }
@@ -106,10 +106,14 @@ hr {
   margin-left:60px;
   margin-top:0px;
   width:229px;
-  height:215px; 
+  height:223px; 
   overflow:hidden;
   border: 0px solid lightgray;
-  cursor:pointer;  
+}
+#fireupload {
+  height: 180px;
+  overflow:hidden;
+  cursor:pointer; 
 }
 .emptyfield{
   border: 1px solid red;
@@ -350,10 +354,14 @@ hr {
   background:black;
 }
 #welcome-msg {
-  float:right;
+  clear:both;
+  width: 93%;
+  height: 50px;
   font-size:23px;
+  margin-top:63px;
   margin-bottom:23px;
   margin-right:7%;
+  text-align:right; 
   font-weight:900;
   color:#000000;
 }
