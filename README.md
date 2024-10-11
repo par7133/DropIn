@@ -8,7 +8,7 @@ DropIn is released under GPLv3 license, it is supplied AS-IS and we do not take 
   
 First step, use the left side panel password and salt fields to create the hash to insert in the config file. Remember to manually set there also the salt value.  
   
-As you are going to run Homolog in the PHP process context, using a limited web server or phpfpm user, you must follow some simple directives for an optimal first setup:  
+As you are going to run DropIn in the PHP process context, using a limited web server or phpfpm user, you must follow some simple directives for an optimal first setup:  
 <ol>
 <li>Check the permissions of your "data" folder in your web app private path; and set its path in the config file.</li>
 <li>In the data path create a ".DI_history" and ".DI_captchahistory" files and give them the write permission.</li>
