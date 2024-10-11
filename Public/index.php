@@ -921,7 +921,7 @@ upload();
 	
   <meta charset="UTF-8"/>
   
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=0.8"/>
   
 <!--
     Copyright 2021, 2024 5 Mode
@@ -1056,8 +1056,6 @@ upload();
                       
         <div style="clear:both;margin:auto;"><br></div>
      
-         <!-- <input type="hidden" name="msg-sign" value="<?php echo(mt_rand(1000000, 9999999)); ?>"> -->
-        
         <input type="hidden" name="msg-sign" value="<?php echo($gdate . PHP_PIPE . PHP_PIPE . PHP_PIPE  . $gtime); ?>"> 
         
         <hr>
@@ -1118,21 +1116,19 @@ upload();
         
         <input type="hidden" id="t" name="t"> 
         
-        <div id="welcome-msg"><h1><?php echo(APP_WELCOME_MSG??"&nbsp;"); ?></h1></div>
+        <div id="welcome-msg"><br><h1><?php echo(APP_WELCOME_MSG??"&nbsp;"); ?></h1></div>
                       
         <div style="clear:both;margin:auto;"><br></div>
      
-         <!-- <input type="hidden" name="msg-sign" value="<?php echo(mt_rand(1000000, 9999999)); ?>"> -->
-        
         <input type="hidden" name="msg-sign" value="<?php echo($gdate . PHP_PIPE . PHP_PIPE . PHP_PIPE  . $gtime); ?>"> 
      
         <hr>
 
-        <div style="clear:both;float:right;margin-right:120px;margin-bottom:30px;">
+        <div style="clear:both;float:right;margin-right:5%;margin-bottom:30px;">
         
         <input id="txtSearch" name="q" type="text" class="search-control" value="<?PHP echo($q); ?>">
         
-        &nbsp;&nbsp;
+        &nbsp;
         
         <select id="cbCat" name="cat" class="search-control" onchange="reload();">
         <option value=""></option>
@@ -1196,8 +1192,6 @@ upload();
                       
         <div style="clear:both;margin:auto;"><br></div>
      
-         <!-- <input type="hidden" name="msg-sign" value="<?php echo(mt_rand(1000000, 9999999)); ?>"> -->
-        
         <input type="hidden" name="msg-sign" value="<?php echo($gdate . PHP_PIPE . PHP_PIPE . PHP_PIPE  . $gtime); ?>"> 
         
         <hr>
@@ -1258,7 +1252,7 @@ upload();
 
 <div class="footer">
 <div id="footerCont">&nbsp;</div>
-<div id="footer"><span style="background:#FFFFFF;opacity:1.0;margin-right:10px;">&nbsp;&nbsp;A <a href="http://5mode.com">5 Mode</a> project <span class="no-sm">and <a href="http://wysiwyg.systems">WYSIWYG</a> system</span>. Some rights reserved.</span></div>	
+<div id="footer"><span style="background:#FFFFFF;opacity:1.0;margin-right:10px;">&nbsp;&nbsp;A <a href="http://5mode.com">5 Mode</a> project <span class="no-sm">and <a href="http://wysiwyg.systems">WYSIWYG</a> system</span>. CC&nbsp;&nbsp;</span></div>	
 </div>
 
 <?php if (file_exists(APP_PATH . DIRECTORY_SEPARATOR . "skinner.html")): ?>
