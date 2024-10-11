@@ -60,7 +60,7 @@
  $signHistory = file($curPath . DIRECTORY_SEPARATOR . ".DI_history");
  $signHistoryDateTime = $signHistory;
  foreach($signHistoryDateTime as &$el) {
-   $el = left($el,19);
+   $el = left($el,21);
  }
  $captchaHistory = file($curPath . DIRECTORY_SEPARATOR . ".DI_captchahistory");
 
@@ -103,14 +103,14 @@
      // #desc:
      // #tags:
      // #cats:
-     // text (separator: ##) 
+     // text (separator: @@@) 
      
-     $aFields = explode(PHP_PIPE, $val);
+     $aFields = explode(PHP_PIPE . PHP_PIPE. PHP_PIPE, $val);
 
      $mydate = $aFields[0]??PHP_STR;
      $mytime = $aFields[1]??PHP_STR;
      //$mydesc = $aFields[2]??PHP_STR;
-     $myid = $mydate . PHP_PIPE . $mytime;
+     $myid = $mydate . PHP_PIPE . PHP_PIPE . PHP_PIPE . $mytime;
      $mytitle = str_replace("#title: ", PHP_STR, explode("~~", $aFields[2])[0]??PHP_STR);
      $mycat = str_replace("#cat: ", PHP_STR,explode("~~", $aFields[2])[3]??PHP_STR);
      if ($cat!=="") {
@@ -119,7 +119,7 @@
        }
      }
      $myheader = (explode("~~", $aFields[2])[0]??PHP_STR) . PHP_EOL . (explode("~~", $aFields[2])[1]??PHP_STR) . PHP_EOL . (explode("~~", $aFields[2])[2]??PHP_STR)  . PHP_EOL .  (explode("~~", $aFields[2])[3]??PHP_STR) . PHP_EOL;
-     $mydesc =   str_replace("##", PHP_EOL, explode("~~", $aFields[2])[4]??PHP_STR);
+     $mydesc =   str_replace("@@@", PHP_EOL, explode("~~", $aFields[2])[4]??PHP_STR);
      if ($q!=="") {
        if (mb_stripos($myheader, $q) === false && mb_stripos($mydesc, $q) === false) {
          continue;
@@ -268,15 +268,15 @@
        $s = rtrim($fileContent[0]) . "~~" . rtrim($fileContent[1]) . "~~" . rtrim($fileContent[2]) . "~~" . rtrim($fileContent[3]) . "~~" ;
        $d = PHP_STR;
        for ($i=4;$i<count($fileContent);$i++) {
-         $d = $d .  rtrim($fileContent[$i]) ."##";
+         $d = $d .  rtrim($fileContent[$i]) ."@@@";
        }
-       $s = $s . "##" . $d;
+       $s = $s . "@@@" . $d;
        
-       $output[] = $date . "|" . $time  . "|" . $s . "|u\n";   
+       $output[] = $date . PHP_PIPE . PHP_PIPE  . PHP_PIPE . $time  . PHP_PIPE . PHP_PIPE  . PHP_PIPE . $s . PHP_PIPE . PHP_PIPE  . PHP_PIPE . "u\n";   
        updateHistory($output, HISTORY_MAX_ITEMS);
 
        echo("<script>");
-       echo("window.open('/','_self')");
+       echo("window.open('/?up=1','_self')");
        echo("</script>");   
        exit;
    }
@@ -392,11 +392,11 @@
        $s = rtrim($fileContent[0]) . "~~" . rtrim($fileContent[1]) . "~~" . rtrim($fileContent[2]) . "~~" . rtrim($fileContent[3]) . "~~" ;
        $d = PHP_STR;
        for ($i=4;$i<count($fileContent);$i++) {
-         $d = $d .  rtrim($fileContent[$i]) ."##";
+         $d = $d .  rtrim($fileContent[$i]) ."@@@";
        }
-       $s = $s . "##" . $d;
+       $s = $s . "@@@" . $d;
        
-       $output[] = $date . "|" . $time  . "|" . $s . "|u\n";   
+       $output[] = $date . PHP_PIPE . PHP_PIPE .  PHP_PIPE . $time  . PHP_PIPE . PHP_PIPE . PHP_PIPE  . $s . PHP_PIPE . PHP_PIPE . PHP_PIPE  ."u\n";   
        updateHistory($output, HISTORY_MAX_ITEMS);
     
        // Cleaning up..
@@ -408,7 +408,7 @@
         
      }	 
       echo("<script>");
-      echo("window.open('/','_self')");
+      echo("window.open('/?up=1','_self')");
       echo("</script>");   
       exit;
    }
@@ -423,6 +423,7 @@ upload();
    global $param2;
    global $param3;
    
+   //echo($command ."<br>");
    $str = trim($command);
    
    $ipos = stripos($str, PHP_SPACE);
@@ -430,8 +431,8 @@ upload();
      $cmd = left($str, $ipos);
      $str = substr($str, $ipos+1);
    } else {
-	   $cmd = $str;
-	   return;
+     $cmd = $str;
+      return;
    }	     
    
    if (left($str, 1) === "-") {
@@ -670,7 +671,7 @@ upload();
      
      //echo("inside myExecConfSignCommand()");
      
-     $newval = left($mysign, strlen($mysign)-2) . "|v"; 
+     $newval = left($mysign, strlen($mysign)-3) . PHP_PIPE. PHP_PIPE ."v"; 
      
      $key = array_search($mysign."\n", $signHistory);
      if ($key !== false) { 
@@ -697,12 +698,12 @@ upload();
      
      //echo("inside myExecConfSignCommand()");
      
-     //$newval = left($mysign, strlen($mysign)-2) . "|v"; 
+     //$newval = left($mysign, strlen($mysign)-3) . PHP_PIPE . PHP_PIPE . PHP_PIPE  . "v"; 
      
      $key = array_search($mysign, $signHistoryDateTime);
      if ($key !== false) { 
      
-       $newval = left($signHistory[$key], strlen($signHistory[$key])-3) . "|v";
+       $newval = left($signHistory[$key], strlen($signHistory[$key])-5) . PHP_PIPE . PHP_PIPE . PHP_PIPE  ."v";
      
        $signHistory[$key] = $newval . "\n"; 
        
@@ -738,7 +739,7 @@ upload();
   //param1 in $signHistory
   //if (!in_array($myval."\n",$signHistory)) {
   if (!in_array($myval,$signHistoryDateTime)) {
-    echo("WARNING: invalid parameters1$myval<br>");	
+    echo("WARNING: invalid parameters<br>");	
     return false;
   }  
   
@@ -802,7 +803,7 @@ upload();
      $key = array_search($mysign, $signHistoryDateTime);
      if ($key !== false) { 
      
-       $newval = left($signHistory[$key], strlen($signHistory[$key])-3) . "|u";
+       $newval = left($signHistory[$key], strlen($signHistory[$key])-5) . PHP_PIPE . PHP_PIPE . PHP_PIPE  ."u";
      
        $signHistory[$key] = $newval . "\n"; 
        
@@ -1057,7 +1058,7 @@ upload();
      
          <!-- <input type="hidden" name="msg-sign" value="<?php echo(mt_rand(1000000, 9999999)); ?>"> -->
         
-        <input type="hidden" name="msg-sign" value="<?php echo($gdate . "|" . $gtime); ?>"> 
+        <input type="hidden" name="msg-sign" value="<?php echo($gdate . PHP_PIPE . PHP_PIPE . PHP_PIPE  . $gtime); ?>"> 
         
         <hr>
         
@@ -1123,7 +1124,7 @@ upload();
      
          <!-- <input type="hidden" name="msg-sign" value="<?php echo(mt_rand(1000000, 9999999)); ?>"> -->
         
-        <input type="hidden" name="msg-sign" value="<?php echo($gdate . "|" . $gtime); ?>"> 
+        <input type="hidden" name="msg-sign" value="<?php echo($gdate . PHP_PIPE . PHP_PIPE . PHP_PIPE  . $gtime); ?>"> 
      
         <hr>
 
@@ -1197,7 +1198,7 @@ upload();
      
          <!-- <input type="hidden" name="msg-sign" value="<?php echo(mt_rand(1000000, 9999999)); ?>"> -->
         
-        <input type="hidden" name="msg-sign" value="<?php echo($gdate . "|" . $gtime); ?>"> 
+        <input type="hidden" name="msg-sign" value="<?php echo($gdate . PHP_PIPE . PHP_PIPE . PHP_PIPE  . $gtime); ?>"> 
         
         <hr>
         
@@ -1255,12 +1256,10 @@ upload();
 
 </form>
 
-<!--
 <div class="footer">
 <div id="footerCont">&nbsp;</div>
 <div id="footer"><span style="background:#FFFFFF;opacity:1.0;margin-right:10px;">&nbsp;&nbsp;A <a href="http://5mode.com">5 Mode</a> project <span class="no-sm">and <a href="http://wysiwyg.systems">WYSIWYG</a> system</span>. Some rights reserved.</span></div>	
 </div>
--->
 
 <?php if (file_exists(APP_PATH . DIRECTORY_SEPARATOR . "skinner.html")): ?>
 <?php include("skinner.html"); ?> 
