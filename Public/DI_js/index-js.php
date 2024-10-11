@@ -172,6 +172,8 @@ function setContentPos() {
     $("#burger-menu").css("display","inline");
     //$("#contentbar").css("width","100%");
     $("#logo-hl").css("display","none");
+    $("#template-img").hide();
+    $(".dragover").css("min-width", "450px");
   } else {  
     $("#ahome").attr("href","http://dropin.5mode-foss.eu");
     $("#agithub").css("display","inline");
@@ -182,6 +184,8 @@ function setContentPos() {
     $("#burger-menu").css("display","none");
     //$("#contentbar").css("width","75%");
     $("#logo-hl").css("display","inline");
+    $("#template-img").show();    
+    $(".dragover").css("min-width", "630px");
   }
   hideBurgerMenu();
   //window.scroll(0, 0);
@@ -342,10 +346,10 @@ window.addEventListener("load", function() {
   
   if ($("#frmDI").css("display")==="none") {
     setTimeout("setContentPos()", 5200);  
-    //setTimeout("setFooterPos()", 5300);
+    setTimeout("setFooterPos()", 300);
   } else {
-    setTimeout("setContentPos()", 1000);
-    //setTimeout("setFooterPos()", 2000);
+    setTimeout("setContentPos()", 300);
+    setTimeout("setFooterPos()", 300);
   }      
   
 }, true);
@@ -354,10 +358,10 @@ window.addEventListener("resize", function() {
 
   if ($("#frmDI").css("display")==="none") {
     setTimeout("setContentPos()", 5200);
-    //setTimeout("setFooterPos()", 5300);
+    setTimeout("setFooterPos()", 300);
   } else {
-    setTimeout("setContentPos()", 1000);
-    //setTimeout("setFooterPos()", 2000);
+    setTimeout("setContentPos()", 300);
+    setTimeout("setFooterPos()", 300);
   }      
 
 }, true);
