@@ -1048,7 +1048,7 @@ upload();
         </div>
         </div>
                                 
-        <input id="files" name="files[]" type="file" accept=".txt" style="visibility: hidden;" multiple>
+        <input id="files" name="files[]" type="file" accept=".txt" style="display:none;" multiple>
         
         <input type="hidden" id="t" name="t"> 
         
@@ -1112,7 +1112,7 @@ upload();
         </div>
         </div>
                                 
-        <input id="files" name="files[]" type="file" accept=".txt" style="visibility: hidden;" multiple>
+        <input id="files" name="files[]" type="file" accept=".txt" style="display:none;" multiple>
         
         <input type="hidden" id="t" name="t"> 
         
@@ -1184,7 +1184,7 @@ upload();
         </div>
         </div>
                                 
-        <input id="files" name="files[]" type="file" accept=".txt" style="visibility: hidden;" multiple>
+        <input id="files" name="files[]" type="file" accept=".txt" style="display:none;" multiple>
         
         <input type="hidden" id="t" name="t"> 
         
