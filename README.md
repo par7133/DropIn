@@ -2,7 +2,7 @@
   
 Hello and welcome to DropIn!  
   
-DropIn is a light and simple software on premise to drag your stuff in the form of exerpt.  
+DropIn is a light and simple software on premise to drag your stuff in the form of excerpt.  
    
 DropIn is released under GPLv3 license, it is supplied AS-IS and we do not take any responsibility for its misusage.  
   
