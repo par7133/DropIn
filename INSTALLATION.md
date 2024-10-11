@@ -1,8 +1,8 @@
 # INSTALLATION
    
-  Installing Puzzleu is more straightforward than what it could appear..   
+  Installing DropIn is more straightforward than what it could appear..   
   
-  First, if you use Nginx as reversed proxy just point the root of your web app to /path/to/YourPuzzleu/Public   
+  First, if you use Nginx as reversed proxy just point the root of your web app to /path/to/YourDropIn/Public   
   where the public content is located:
   
   <ol>  
@@ -14,17 +14,10 @@
         listen 80;
         listen [::]:80;
     
-        server_name yourpuzzleu.com;
+        server_name yourdropin.com;
      
-        root /var/www/YourPuzzleu/Public;
-        index index.php; 
-       
-        location / {     
-           
-           if (!-e $request_filename) {
-             rewrite ^(.+)$ /index.php?url=$1 last;
-           }
-        }
+        root /var/www/YourDropIn/Public;
+        index index.php;
      
         location ~* ^.+\.(php)$ {     
           proxy_set_header Host $host;     
@@ -53,6 +46,6 @@
   </li>
   </ol>  
   
-  Apache instead should have DocumentRoot pointing to /path/to/YourPuzzleu/Public .   
+  Apache instead should have DocumentRoot pointing to /path/to/YourDropIn/Public .   
   
   Dan
