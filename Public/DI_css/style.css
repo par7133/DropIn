@@ -165,7 +165,7 @@ hr {
 }
 #fullExerpt {
   width:100%;
-  white-space:pre;
+  white-space:wrap;
   text-align:left;
   padding:30px;
   padding-top:5px;
