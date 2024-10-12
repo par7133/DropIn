@@ -1076,7 +1076,7 @@ upload();
 
                 <table style="width:60%;">
                   <tr>  
-                  <td id="fullExerpt" style="100%;white-space:pre;text-align:left;padding:30px;padding-top:5px;">
+                  <td id="fullExerpt">
                      &nbsp;
                   </td>  
                   </tr> 
@@ -1154,7 +1154,7 @@ upload();
 
                 <table style="width:60%;">
                   <tr>  
-                  <td id="fullExerpt" style="100%;white-space:pre;text-align:left;padding:30px;padding-top:5px;">
+                  <td id="fullExerpt">
                      &nbsp;
                   </td>  
                   </tr> 
@@ -1212,7 +1212,7 @@ upload();
 
                 <table style="width:60%;">
                   <tr>  
-                  <td id="fullExerpt" style="100%;white-space:pre;text-align:left;padding:30px;padding-top:5px;">
+                  <td id="fullExerpt">
                      &nbsp;
                   </td>  
                   </tr> 
