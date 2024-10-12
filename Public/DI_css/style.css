@@ -163,6 +163,13 @@ hr {
 #footer2 {
   font-size:23px;
 }
+#fullExerpt {
+  width:100%;
+  white-space:pre;
+  text-align:left;
+  padding:30px;
+  padding-top:5px;
+}
 #genius {
   position:relative; 
   left:+1px; 
