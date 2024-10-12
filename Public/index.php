@@ -1052,7 +1052,7 @@ upload();
         
         <input type="hidden" id="t" name="t"> 
         
-        <div id="welcome-msg"><h1><?php echo(APP_WELCOME_MSG??"&nbsp;"); ?></h1></div>
+        <div id="welcome-msg"><h1><span id="page-title"><?php echo(APP_WELCOME_MSG??"&nbsp;"); ?></span></h1></div>
                       
         <div style="clear:both;margin:auto;"><br></div>
      
@@ -1116,7 +1116,7 @@ upload();
         
         <input type="hidden" id="t" name="t"> 
         
-        <div id="welcome-msg"><br><h1><?php echo(APP_WELCOME_MSG??"&nbsp;"); ?></h1></div>
+        <div id="welcome-msg"><br><h1><span id="page-title"><?php echo(APP_WELCOME_MSG??"&nbsp;"); ?></span></h1></div>
                       
         <div style="clear:both;margin:auto;"><br></div>
      
@@ -1188,7 +1188,7 @@ upload();
         
         <input type="hidden" id="t" name="t"> 
         
-        <div id="welcome-msg"><h1><?php echo(APP_WELCOME_MSG??"&nbsp;"); ?></h1></div>
+        <div id="welcome-msg"><h1><span id="page-title"><?php echo(APP_WELCOME_MSG??"&nbsp;"); ?></span></h1></div>
                       
         <div style="clear:both;margin:auto;"><br></div>
      
