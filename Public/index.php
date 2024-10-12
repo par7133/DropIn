@@ -1074,7 +1074,7 @@ upload();
               <img src="/DI_res/pxl.png" style="width:98%; vertical-align:top; opacity:0.2">
               <div style="position:absolute; top:10px; width:100%;padding:50px;">
 
-                <table style="width:60%;">
+                <table style="width:100%;">
                   <tr>  
                   <td id="fullExerpt">
                      &nbsp;
@@ -1152,7 +1152,7 @@ upload();
               <img src="/DI_res/pxl.png" style="width:98%; vertical-align:top; opacity:0.2">
               <div style="position:absolute; top:10px; width:100%;padding:50px;">
 
-                <table style="width:60%;">
+                <table style="width:100%;">
                   <tr>  
                   <td id="fullExerpt">
                      &nbsp;
@@ -1210,7 +1210,7 @@ upload();
               <img src="/DI_res/pxl.png" style="width:98%; vertical-align:top; opacity:0.2">
               <div style="position:absolute; top:10px; width:100%;padding:50px;">
 
-                <table style="width:60%;">
+                <table style="width:100%;">
                   <tr>  
                   <td id="fullExerpt">
                      &nbsp;
