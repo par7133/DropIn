@@ -56,6 +56,7 @@ define('APP_WELCOME_MSG', "your exerpt list:");
 define('APP_MAX_FROM_IP', 5);
 // Default Context: 'PRIVATE' or 'PUBLIC'
 define('APP_DEFAULT_CONTEXT', "PUBLIC");
+define('APP_FILE_MAX_SIZE', 496000);
 define('APP_CATS', "(PHP|HTML|JS|SHELL|TCL-TK)");
 define('DISPLAY_SHOW_HEADER', true);
 define('DISPLAY_SHOW_DATETIME', true);
@@ -91,7 +92,8 @@ $CONFIG = [
       // Max signs from a single client
       'MAX_FROM_IP' =>  5,
       // Default Context: 'PRIVATE' or 'PUBLIC'
-      'DEFAULT_CONTEXT' => "PUBLIC"
+      'DEFAULT_CONTEXT' => "PUBLIC",
+      'FILE_MAX_SIZE' => 496000,
       'CATS' => "(PHP|HTML|JS|SHELL|TCL-TK)"
       ],
     
