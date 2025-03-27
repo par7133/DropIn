@@ -20,8 +20,8 @@ As you are going to run DropIn in the PHP process context, using a limited web s
 </ul>
 </ol>
    
-Feedback: <a href="mailto:posta@elettronica.lol" style="color:#e6d236;">posta@elettronica.lol</a>
-  	   
 ## Screenshots  
 	   
  ![DropIn in action](/Public/DI_res/screenshot1.png)
+
+Feedback: <a href="mailto:code@gaox.io" style="color:#e6d236;">code@gaox.io</a>
