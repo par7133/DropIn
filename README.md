@@ -19,6 +19,12 @@ As you are going to run DropIn in the PHP process context, using a limited web s
  <li>Configure the max history items as required (default: 1000).</li>	      
 </ul>
 </ol>
+
+Login with the password for the admin view.
+
+For any need of software additions, plugins and improvements please write to <a href="mailto:info@5mode.com">info@5mode.com</a>  
+
+To help please donate by clicking <a href="https://gaox.io/l/dona1">https://gaox.io/l/dona1</a> and filling the form.   
    
 ## Screenshots  
 	   
