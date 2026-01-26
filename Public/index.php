@@ -1234,7 +1234,7 @@ upload();
 
     <?php if(APP_USE === "BUSINESS"): ?>    
     <div id="footer2">
-      <a id="ahome" href="http://dropin.5mode-foss.eu" target="_blank" style="color:black;"><img id="logo-hl" src="/DI_res/DIlogo.png">Powered by DropIn</a>
+      <a id="ahome" href="http://dropin.numode-foss.eu" target="_blank" style="color:black;"><img id="logo-hl" src="/DI_res/DIlogo.png">Powered by DropIn</a>
     </div>
     <?php endif; ?>&nbsp;
        
@@ -1252,7 +1252,7 @@ upload();
 
 <div class="footer">
 <div id="footerCont">&nbsp;</div>
-<div id="footer"><span style="background:#FFFFFF;opacity:1.0;margin-right:10px;">&nbsp;&nbsp;A <a href="http://5mode.com">5 Mode</a> project <span class="no-sm">and <a href="http://wysiwyg.systems">WYSIWYG</a> system</span>. CC&nbsp;&nbsp;</span></div>	
+<div id="footer"><span style="background:#FFFFFF;opacity:1.0;margin-right:10px;">&nbsp;&nbsp;A <a href="http://numode.eu">NuMode</a> project <span class="no-sm">and <a href="http://demo.numode.eu">WYSIWYG</a> system</span>. CC&nbsp;&nbsp;</span></div>	
 </div>
 
 <?php if (file_exists(APP_PATH . DIRECTORY_SEPARATOR . "skinner.html")): ?>
