@@ -949,7 +949,7 @@ upload();
     
   <meta name="description" content="<?php echo(APP_DESCRIPTION); ?>"/>
   <meta name="keywords" content="<?php echo(APP_KEYWORDS); ?>"/>
-  <meta name="author" content="5 Mode"/> 
+  <meta name="author" content="NuMode"/> 
   <meta name="robots" content="index,follow"/>
   
   <script src="/DI_js/jquery-3.6.0.min.js" type="text/javascript"></script>
@@ -976,7 +976,7 @@ upload();
 
 <?php if(APP_USE === "PRIVATE"): ?>
 <div class="header">
-   <a id="ahome" href="http://dropin.5mode-foss.eu" target="_blank" style="color:black; text-decoration: none;"><img id="logo-hmm" src="/DI_res/DIlogo.png" style="width:32px;">&nbsp;DropIn</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="agithub" href="https://github.com/par7133/DropIn" style="color:#000000"><span style="color:#119fe2">on</span> github</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="afeedback" href="mailto:code@gaox.io" style="color:#000000"><span style="color:#119fe2">for</span> feedback</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="asupport" href="tel:+39-378-0812391" style="font-size:13px;background-color:#15c60b;border:2px solid #15c60b;color:black;height:27px;text-decoration:none;">&nbsp;&nbsp;get support&nbsp;&nbsp;</a><div id="pwd2" style="float:right;position:relative;top:+13px;display:none"><input type="password" id="Password2" name="Password2" placeholder="password" style="font-size:13px; background:#393939; color:#ffffff; width: 125px; border-radius:3px;" value="" autocomplete="off"></div>
+   <a id="ahome" href="http://dropin.numode-foss.eu" target="_blank" style="color:black; text-decoration: none;"><img id="logo-hmm" src="/DI_res/DIlogo.png" style="width:32px;">&nbsp;DropIn</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="agithub" href="https://github.com/par7133/DropIn" style="color:#000000"><span style="color:#119fe2">on</span> github</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="afeedback" href="mailto:code@gaox.io" style="color:#000000"><span style="color:#119fe2">for</span> feedback</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="asupport" href="tel:+39-378-0812391" style="font-size:13px;background-color:#15c60b;border:2px solid #15c60b;color:black;height:27px;text-decoration:none;">&nbsp;&nbsp;get support&nbsp;&nbsp;</a><div id="pwd2" style="float:right;position:relative;top:+13px;display:none"><input type="password" id="Password2" name="Password2" placeholder="password" style="font-size:13px; background:#393939; color:#ffffff; width: 125px; border-radius:3px;" value="" autocomplete="off"></div>
 </div>
 <?php else: ?>
 <div class="header2">
